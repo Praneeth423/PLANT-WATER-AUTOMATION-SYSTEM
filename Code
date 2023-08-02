@@ -1,0 +1,17 @@
+int water;
+void setup() {
+   pinmode(3,OUTPUT);
+   pinmode(6,OUTPUT);
+}
+void loop(){
+  water = digitalRead(6);
+  if(water == HIGH)
+  {
+  digitalwrite(3,LOW);
+  }
+  else
+  {
+  digitalwrite(3,HIGH);
+  }
+  delay(400)
+}
